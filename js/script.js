@@ -1,5 +1,5 @@
 async function init(){
-    await fetchData();
+    await fetchData(characterUrl);
 
     renderHighlightBubbles(characterArray);
 
@@ -8,27 +8,27 @@ async function init(){
 
 }
 
+let characterUrl = "https://potterhead-api.vercel.app/api/characters";
 
-async function fetchData(){
+async function fetchData(characterUrl){
     const response = await fetch(characterUrl);
     const data = await response.json();
 
-    let characterData = {
-        name: data.attributes.name,
-        alias: data.attributes.alias_names,
-        born: data.attributes.born,
-        hair_color: data.attributes.hair_color,
-        bloodstatus: data.attributes.blood_status,
-        animagus: data.attributes.animagus,
-        house: data.attributes.house,
-        patronus: data.attributes.patronus,
-        wand: data.attributes.wands,
-        marital_status: data.attributes.marital_status,
-        image: data.attributes.image,
-        job: data.attributes.jobs,  
+    characterData = {
+        name: data.name,
+        alias: data.alternate_names,
+        born: data.dateOfBirth,
+        hair_color: data.hairColour,
+        ancestry: data.ancestry,
+        house: data.house,
+        patronus: data.patronus,
+        wand_core: data.wand.core,
+        wand: data.wand.wood,
+        image: data.image,  
     };
 
-    characterArray.push(characterData);
+    characterArray.push(characterData)
+   
 
     
 }
