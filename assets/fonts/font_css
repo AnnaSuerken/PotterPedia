@@ -1,9 +1,0 @@
-@font-face{
-    font-family: "Lumos";
-    src: url("./LUMOS.TTF");
-}
-
-@font-face{
-    font-family: "MagicSchool";
-    src: url("./MagicSchoolOne.ttf");
-}
