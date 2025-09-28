@@ -9,7 +9,6 @@ async function init(){
 }
 
 
-
 async function fetchData(){
     const response = await fetch(characterUrl);
     const data = await response.json();
