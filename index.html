@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PotterPedia</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/assets.css" />
+    <script src="./js/script.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="./js/db.js"></script>
+  </head>
+  <body onload="init()">
     <header>
-
+      <div class="header-content">
+        <img src="./assets/imgs/potterpedia_logo.png" alt="Logo" class="logo" />
+        <h1>Dive into your favourite world</h1>
+      </div>
+      <nav></nav>
     </header>
     <main>
-        <section>
-            <div>
-                <input type="text" placeholder="Geben Sie eine Stadt ein...">
-                <button>Suchen</button>
-            </div>
-            <div></div>
-        </section>
+      <section class="content-section" id="content-section">
+        
+        <div class="overlay">
+          <table>
+            <tr>
+              <td>Name</td>
+              <td>Harry Potter</td>
+            </tr>
+            <tr>
+              <td>Born</td>
+              <td>...</td>
+            </tr>
+            <tr>
+              <td>Species</td>
+              <td>...</td>
+            </tr>
+          </table>
+        </div>
+      </section>
     </main>
     <footer>
-
+      <div>copyright Anna Sürken</div>
     </footer>
-    
-</body>
+  </body>
 </html>

@@ -1,0 +1,37 @@
+body {
+  height: 100vh;
+  background-color: #00001b;
+  font-optical-sizing: auto;
+  font-style: normal;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #bb9a37;
+  font-family: "Lumos";
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 1px 1px #bb9a37;
+}
+
+main {
+  margin-top: 64px;
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 1px #bb9a37;
+  position: fixed;
+  height: 64px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}

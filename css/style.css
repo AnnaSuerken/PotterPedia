@@ -1,0 +1,33 @@
+.logo {
+    width: 120px;
+}
+
+.content-bubble{
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color: #BB9A37;
+    background-color: rgb(4, 8, 51);
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content-bubble:hover{
+    transform: scale(1.2);
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-left: 64px;
+    margin-right: 64px;
+}
+
+.overlay {
+    display: none;
+}
