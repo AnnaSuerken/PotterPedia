@@ -14,7 +14,7 @@ async function fetchData(characterUrl){
     const response = await fetch(characterUrl);
     const data = await response.json();
 
-    characterData = {
+    let characterData = {
         name: data.name,
         alias: data.alternate_names,
         born: data.dateOfBirth,
