@@ -14,14 +14,14 @@ async function fetchData(characterUrl) {
 
 
   let characterData = {
-    name: data[index].name,
-    alias: data[index].alternate_names,
-    born: data[index].dateOfBirth,
-    hair_color: data[index].hairColour,
-    ancestry: data[index].ancestry,
-    house: data[index].house,
-    patronus: data[index].patronus,
-    image: data[index].image,
+    name: data[0].name,
+    alias: data[0].alternate_names,
+    born: data[0].dateOfBirth,
+    hair_color: data[0].hairColour,
+    ancestry: data[0].ancestry,
+    house: data[0].house,
+    patronus: data[0].patronus,
+    image: data[0].image,
   };
 
   characterArray.push(characterData);
