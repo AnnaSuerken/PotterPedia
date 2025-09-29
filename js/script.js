@@ -1,44 +1,37 @@
-async function init(){
-    await fetchData(characterUrl);
+async function init() {
+  await fetchData(characterUrl);
 
-    renderHighlightBubbles(characterArray);
+  renderHighlightBubbles(characterArray);
 
-    
-    console.log(characterArray)
-
+  console.log(characterArray);
 }
 
 let characterUrl = "https://potterhead-api.vercel.app/api/characters";
 
-async function fetchData(characterUrl){
-    const response = await fetch(characterUrl);
-    const data = await response.json();
+async function fetchData(characterUrl) {
+  const response = await fetch(characterUrl);
+  const data = await response.json();
 
-    let characterData = {
-        name: data.name,
-        alias: data.alternate_names,
-        born: data.dateOfBirth,
-        hair_color: data.hairColour,
-        ancestry: data.ancestry,
-        house: data.house,
-        patronus: data.patronus,
-        wand_core: data.wand.core,
-        wand: data.wand.wood,
-        image: data.image,  
-    };
 
-    characterArray.push(characterData)
-   
+  let characterData = {
+    name: data[index].name,
+    alias: data[index].alternate_names,
+    born: data[index].dateOfBirth,
+    hair_color: data[index].hairColour,
+    ancestry: data[index].ancestry,
+    house: data[index].house,
+    patronus: data[index].patronus,
+    image: data[index].image,
+  };
 
-    
+  characterArray.push(characterData);
 }
 
-function renderHighlightBubbles(array){
-    let contentRef = document.getElementById('content-section');
-    contentRef.innerHTML = "";
+function renderHighlightBubbles(array) {
+  let contentRef = document.getElementById("content-section");
+  contentRef.innerHTML = "";
 
-    for (let index = 0; index < array.length; index++) {
-        contentRef.innerHTML += getHighlightBubble();
-        
-    }
+  for (let index = 0; index < array.length; index++) {
+    contentRef.innerHTML += getHighlightBubble();
+  }
 }

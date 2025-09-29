@@ -1,7 +1,7 @@
-function getHighlightBubble(){
+function getHighlightBubble(index){
     return `<div class="content-bubble">
-          <h2>${characterArray[index]}</h2>
-          <p>Subline</p>
-          <img src="" alt="" />
+          <img src="${characterArray[2].image}" alt="" class="character-img" />
+          <h2>${characterArray[2].name}</h2>
+          <p>${characterArray[2].alias}</p>
         </div>`
 }
